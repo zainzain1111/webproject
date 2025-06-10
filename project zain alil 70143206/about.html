@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About Us | Builders Co.</title>
+  <link rel="stylesheet" href="about.css">
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Us</h1>
+    <p></p>
+  </header>
+  <main>
+    <section class="about-section">
+      <h2>Who We Are</h2>
+      <p>Zcc. has been crafting excellence for over 20 years. Our team of expert engineers, architects, and designers work tirelessly to build structures that last and inspire.</p>
+    </section>
+    <section class="mission-section">
+      <h2>Our Mission</h2>
+      <p>To deliver exceptional quality and innovation in every project, ensuring customer satisfaction and a positive impact on the community.</p>
+    </section>
+    <button id="contactBtn">Contact Us (+92 335 047862 8)</button>
+  </main>
+  <footer>
+    <p>&copy; All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const welcomeText = "Welcome to Zcc. where your vision becomes reality.";
+      const element = document.querySelector("header p");
+      let index = 0;
+
+      function typeWriter() {
+        if (index < welcomeText.length) {
+          element.textContent += welcomeText.charAt(index);
+          index++;
+          setTimeout(typeWriter, 40);
+        }
+      }
+      element.textContent = "";
+      typeWriter();
+    });
+    document.getElementById('contactBtn').addEventListener('click', function() {
+      alert("Thank you for reaching out! We’ll contact you soon.");
+    });
+  </script>
+</body>
+</html>
